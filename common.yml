@@ -1,0 +1,12 @@
+
+ghost_files:
+  image: ghost:latest
+  command: /bin/true
+
+ghost_site:
+  restart: always
+  image: ghost:latest
+  expose:
+    - "2368"
+  environment:
+    - HTTPS_METHOD=noredirect
